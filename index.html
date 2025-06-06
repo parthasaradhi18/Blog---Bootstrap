@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Blog - Bootstrap 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <style>
+    /* Optional: Limit image height for better mobile view */
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+    }
+    @media (max-width: 576px) {
+      .carousel-item img {
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">MYBLOGS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <form class="d-flex ms-lg-3 mt-2 mt-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-light">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<nav class="bg-light py-2">
+  <div class="container">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active">Blog</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="Tirupati.jpeg" class="d-block w-100" height="600" alt="Tirupati">
+    </div>
+    <div class="carousel-item">
+      <img src="Kedarnath.png" class="d-block w-100" height="600" alt="Kedarnath">
+    </div>
+    <div class="carousel-item">
+      <img src="Arunachalesvara.webp" class="d-block w-100" height="600" alt="Arunachalam">
+    </div>
+       <div class="carousel-item">
+      <img src="Gokarna.jpeg" class="d-block w-100" height="600" alt="Gokarna">
+    </div>
+       <div class="carousel-item">
+      <img src="Goa.jpeg" class="d-block w-100" height="600" alt="Goa">
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Main Content -->
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Sidebar (Will stack on mobile) -->
+    <aside class="col-lg-3">
+      <div class="bg-light p-3 rounded shadow-sm">
+        <h5>Categories</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Spiritual</a></li>
+          <li><a href="#">Pilgrimages</a></li>
+          <li><a href="#">Mountains</a></li>
+          <li><a href="#">Historical</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Blog Cards -->
+    <main class="col-lg-9">
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <img src="Tirupati.jpeg" class="card-img-top" alt="Tirupati">
+            <div class="card-body">
+              <h5 class="card-title">Tirupati</h5>
+              <p class="card-text">Famous for Sri Venkateswara Temple, one of the most visited pilgrimage sites in the world.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <img src="Arunachalesvara.webp" class="card-img-top" alt="Arunachalam">
+            <div class="card-body">
+              <h5 class="card-title">Arunachalam</h5>
+              <p class="card-text">Known for Agni Lingam, symbolizing self-sacrifice and spiritual awakening.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <img src="Kedarnath.png" class="card-img-top" alt="Kedarnath">
+            <div class="card-body">
+              <h5 class="card-title">Kedarnath</h5>
+              <p class="card-text">A Jyotirlinga of Lord Shiva and part of Char Dham, known for spiritual liberation.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+           </div>
+        </div>
+         <!-- Card 4 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <img src="Gokarna.jpeg" class="card-img-top" alt="Gokarna">
+            <div class="card-body">
+              <h5 class="card-title">Gokarna</h5>
+              <p class="card-text">A remotely, small holy town in the state of Karnataka, Gokarna is popular for its pristine and secluded beaches.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </main>
+<!-- Pagination -->
+<nav aria-label="Blog page navigation">
+  <ul class="pagination justify-content-center mt-4">
+    <li class="page-item disabled">
+      <a class="page-link">&laquo; Prev</a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="page2.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="page3.html">3</a></li>
+    <li class="page-item"><a class="page-link" href="page4.html">4</a></li>
+    <li class="page-item"><a class="page-link" href="page5.html">5</a></li>
+    <li class="page-item">
+      <a class="page-link" href="page2.html">Next &raquo;</a>
+    </li>
+  </ul>
+</nav>
+
+  </div>
+</div>
+
+<!-- Newsletter -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h4>Subscribe to Our Newsletter</h4>
+    <form class="row justify-content-center">
+      <div class="col-md-4 col-sm-8">
+        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-4 mt-auto">
+  <div class="container">
+    <p>Follow us:</p>
+    <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i> Facebook</a>
+    <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i> Twitter</a>
+    <p class="mt-3">&copy; 2025 MyBlog. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+        class="btn btn-dark position-fixed bottom-0 end-0 m-3">
+  ↑
+</button>
+
+</body>
+</html>
